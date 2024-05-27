@@ -9,7 +9,7 @@
       border: 1px solid black;
     }
   </style>
-  <title>{{ title }} Sentiment Analysis Demo</title>
+  <title>{{ title }} Sentiment Analysis </title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
@@ -17,15 +17,17 @@
 <body>
   <h1>Welcome To Sentiment Analyzer</h1>
   <form method="POST">
-    <textarea name="text1" placeholder="input text here..." rows="10" cols="109"></textarea><br><br>
+    <textarea name="text1" placeholder="Enter text here..." rows="9" cols="96"></textarea><br><br>
 
     <input class="example_a" type="submit">
   </form>
   {% if final %}
   <div class = "Outp">
-    <p>The Sentiment of '{{ text1 }}' is {{ final *100}}% positive !</p>
+    <p class="Outp1">Calculated Sentiment  of '{{text1}}': '{{final}}'</p>
+    <p class="Outp1">Combined Voting Prediction: '{{combined}}'</p>
+    <p class="Outp1">The Sentiment is {{ text4 *100}}% positive and {{100-(text4 *100)}}% negative!</p>
 
-</div>
+<</div>
 <div>
     <h2>Score table</h2>
 
@@ -62,3 +64,4 @@
 </body>
 
 </html>
+
